@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class LuhnAlgorithm {
     public static int[] computeArray(String number) {
-        int [] digits = toIntArray(number);
+        int[] digits = toIntArray(number);
         for(int i = digits.length - 2; i >= 0; i -= 2) {
             if (digits[i] * 2 > 9) digits[i] = sumDigits(digits[i] * 2);
             else digits[i] *= 2;
